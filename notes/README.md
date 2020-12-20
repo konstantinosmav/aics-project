@@ -24,3 +24,7 @@ I am planning to use this as a lab log.
 - Made a function that resizes images,  converts them to RGB images and then stores them to a tensor and saves them to the GPU.
 - Iterated through the train, validation and test dataset and created tensors out of all posters.
 - Used pickle to save the tensors of tensors for future save.
+
+20.12.20:
+- Did some cleaning up on the code.
+- Documented what I have done up to now.
