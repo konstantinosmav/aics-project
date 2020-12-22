@@ -28,3 +28,6 @@ I am planning to use this as a lab log.
 20.12.20:
 - Did some cleaning up on the code.
 - Documented what I have done up to now.
+
+21.12.20:
+- Realized that if I wanted to use titles as an input to my model I should have excluded non English titles, so I decided to write a function to filter them out.
