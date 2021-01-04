@@ -39,3 +39,6 @@ I am planning to use this as a lab log.
 
 02.01.21:
 - Made a bar plot to visualize the distribution of number of labels per movie in my data.
+
+04.01.21:
+- Started research on what methods to use to preprocess the textual data. I decided to use a slightly modified cleaning up function for the title string and the overview string since certain titles contain solely stop words (e.g. 'Who am I?') and removing stop words in this case would return an empty string.
