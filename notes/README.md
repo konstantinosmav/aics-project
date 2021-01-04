@@ -7,6 +7,7 @@ I am planning to use this as a lab log.
 16.12.20: 
 - Loaded the movie data that was given in a csv file.
 - Filtered out the columns I did not need and only kept the title, the overview, the movie id and the genre column.
+- Filtered out all genres that appeared only once and did not really make sense.
 - Given the weird formatting of the genre column, I did some necessary cleaning to make accessing the genres more convenient.
 - Made a plot to visualize the genre distribution.
 
@@ -31,3 +32,10 @@ I am planning to use this as a lab log.
 
 21.12.20:
 - Realized that if I wanted to use titles as an input to my model I should have excluded non English titles, so I decided to write a function to filter them out.
+
+31.12.20:
+- Did some research on multi label classification and came across the MultiLabelBinarizer from sklearn.preprocessing, so I made a function to transform the labels for each movie into a one hot encoding.
+- Had to convert the string representation of each list of labels into a regular list so that I could fit the list of lists binarizer and then tranform the label sets.
+
+02.01.21:
+- Made a bar plot to visualize the distribution of number of labels per movie in my data.
