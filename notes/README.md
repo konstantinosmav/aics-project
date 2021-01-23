@@ -49,4 +49,10 @@ I am planning to use this as a lab log.
 - Fit the tokenizer on all textual data available(titles and overviews) and used the word_index method of the tokenizer to get a mapping of each unique token to an integer representation. This yielded around 72k unique tokens.
 - Started looking into what kind of pretrained embeddings I read on word2vec, fasttext and GLoVe representations of words. I experimented with all of them. I found the word2vec one the most easy to work with. I will either use word2vec or write a function that lets the user decide which embedding to use.
 
+## 15.01.2021:
+- Wrote a function that loads the pretrained word2vec embeddings into a matrix of shape (3000000,300). Embedded representations for around 35k of the words in the textual data were found.
+- Tokenized the textual data, transformed them into their corresponding index and padded them to the length of the longest sequence so that I don't need to do it inside the model. 
+
+## 16.01.2021:
+- Came across the TensorDataset from Pytorch to transform the arrays into tensors for my textual data and the labels and I did the same for the image labels.
 
