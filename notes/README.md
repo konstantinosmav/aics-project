@@ -56,3 +56,12 @@ I am planning to use this as a lab log.
 ## 16.01.2021:
 - Came across the TensorDataset from Pytorch to transform the arrays into tensors for my textual data and the labels and I did the same for the image labels.
 
+## 21.01.2021:
+ - Started doing research on how to implement a neural network that takes image and textual data as input. In most papers and posts, I found that LSTM layers are mostly used for text, while convolutional layers are mostly for the images. Then, the transformed inputs are concatenated. Thinking I will probably implement a model like that.
+ - I am also considering using a Pytorch Sequential container.
+ 
+ ## 22.02.2021:
+- I was really perplexed about how to pass the output of a convolutional layer as an input to a linear layer so I just read on that the whole day. I am still a bit unsure how it is calculated but I can now resize the four-dimensional convolutinal layer output to a two-dimensional vector.
+
+## 23.02.2021:
+- Started working on my model's architecture. First, I am planning to make a network that takes the overview and the poster as inputs. I am a bit unsure if I should make just multiple models depending on the kind of input data  or just add many if statements in the same nn.Module - I fear the former choice can get a bit messy. 
