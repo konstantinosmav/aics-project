@@ -65,3 +65,16 @@ I am planning to use this as a lab log.
 
 ## 23.02.2021:
 - Started working on my model's architecture. First, I am planning to make a network that takes the overview and the poster as inputs. I am a bit unsure if I should make just multiple models depending on the kind of input data  or just add many if statements in the same nn.Module - I fear the former choice can get a bit messy. 
+
+## 24.02.2021:
+- I wrote the forward function, which basically takes textual input and an image input, passes them through the layers I have defined when initializing my model and after passing them through linear layers I concatenate the two outputs. Then the combination of the outputs is again passed through two linear layers.
+- I also worked on my training function.
+
+## 25.02.2021:
+- I am basically done with a training function.
+- I trained and saved the first model with overview and image features as input. I got quite high acuracy for both the training and the validation set. Loss was also acceptable.
+
+## 28.02.2021:
+- I can basically use the same architecture to test my model with the title and the poster as features. 
+- I trained and saved a model with the aforementioned features. Training and validation accuracy was lower for this model. 
+
