@@ -77,4 +77,8 @@ I am planning to use this as a lab log.
 ## 28.02.2021:
 - I can basically use the same architecture to test my model with the title and the poster as features. 
 - I trained and saved a model with the aforementioned features. Training and validation accuracy was lower for this model. 
+- I thought implementing the version of the model with title, overview and image poster as inputs would be fairly simple. What I did was to batch the titles to the length of the longest title and then concatenate the overview input and the title input along the first dimension in the forward function of my model. However, when making the adjustments to the train function and attempting to train it, it took an incredibly long time – I was training it for three hours and without making it past the 1st epoch.
+
+## 29.02.2021:
+- I thought of just concatenating the strings of the two columns, then getting the integer representations. Maybe this will work. This way, I won't have to batch the titles, so I am saving on memory too.
 
