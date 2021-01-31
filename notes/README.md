@@ -60,25 +60,38 @@ I am planning to use this as a lab log.
  - Started doing research on how to implement a neural network that takes image and textual data as input. In most papers and posts, I found that LSTM layers are mostly used for text, while convolutional layers are mostly for the images. Then, the transformed inputs are concatenated. Thinking I will probably implement a model like that.
  - I am also considering using a Pytorch Sequential container.
  
- ## 22.02.2021:
+ ## 22.01.2021:
 - I was really perplexed about how to pass the output of a convolutional layer as an input to a linear layer so I just read on that the whole day. I am still a bit unsure how it is calculated but I can now resize the four-dimensional convolutinal layer output to a two-dimensional vector.
 
-## 23.02.2021:
+## 23.01.2021:
 - Started working on my model's architecture. First, I am planning to make a network that takes the overview and the poster as inputs. I am a bit unsure if I should make just multiple models depending on the kind of input data  or just add many if statements in the same nn.Module - I fear the former choice can get a bit messy. 
 
-## 24.02.2021:
+## 24.01.2021:
 - I wrote the forward function, which basically takes textual input and an image input, passes them through the layers I have defined when initializing my model and after passing them through linear layers I concatenate the two outputs. Then the combination of the outputs is again passed through two linear layers.
 - I also worked on my training function.
 
-## 25.02.2021:
+## 25.01.2021:
 - I am basically done with a training function.
 - I trained and saved the first model with overview and image features as input. I got quite high acuracy for both the training and the validation set. Loss was also acceptable.
 
-## 28.02.2021:
+## 28.01.2021:
 - I can basically use the same architecture to test my model with the title and the poster as features. 
 - I trained and saved a model with the aforementioned features. Training and validation accuracy was lower for this model. 
 - I thought implementing the version of the model with title, overview and image poster as inputs would be fairly simple. What I did was to batch the titles to the length of the longest title and then concatenate the overview input and the title input along the first dimension in the forward function of my model. However, when making the adjustments to the train function and attempting to train it, it took an incredibly long time – I was training it for three hours and without making it past the 1st epoch.
 
-## 29.02.2021:
+## 29.01.2021:
 - I thought of just concatenating the strings of the two columns, then getting the integer representations. Maybe this will work. This way, I won't have to batch the titles, so I am saving on memory too.
+- Met with Nikolai and discussed about my model architecture. Some points he brought up: 
+ - use contextual word embeddings instead of simple word embeddings.
+ - use more inputs (e.g. production companies, actors etc.). I checked this and found out that actors are not available, however I did find languages, countries where the movie was shot and production companies for each movie. I could prob make use of the production companies.
+ - use half of my data to avoid memory errors.
+ - use smaller batch size (I was already using really small batch size (5)).
+ - find which cnn architecture my model resembles (most likely VGG or ResNet).
+ - experiment with concatenating and summing the visual and the language inputs.
+ - concatenate the textual inputs after getting embeddings for them.
+ 
+## 30.01.2021
+- Only added production companies as extra input to my model – I think language and countries where the movie was shot won't provide valuable information for the classification task.
+- retrained my models on half of the data.
+ 
 
