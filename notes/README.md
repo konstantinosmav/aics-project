@@ -82,13 +82,13 @@ I am planning to use this as a lab log.
 ## 29.01.2021:
 - I thought of just concatenating the strings of the two columns, then getting the integer representations. Maybe this will work. This way, I won't have to batch the titles, so I am saving on memory too.
 - Met with Nikolai and discussed about my model architecture. Some points he brought up: 
- - use contextual word embeddings instead of simple word embeddings.
- - use more inputs (e.g. production companies, actors etc.). I checked this and found out that actors are not available, however I did find languages, countries where the movie was shot and production companies for each movie. I could prob make use of the production companies.
- - use half of my data to avoid memory errors.
- - use smaller batch size (I was already using really small batch size (5)).
- - find which cnn architecture my model resembles (most likely VGG or ResNet).
- - experiment with concatenating and summing the visual and the language inputs.
- - concatenate the textual inputs after getting embeddings for them.
+  - use contextual word embeddings instead of simple word embeddings.
+  - use more inputs (e.g. production companies, actors etc.). I checked this and found out that actors are not available, however I did find languages, countries where the movie was shot and production companies for each movie. I could prob make use of the production companies.
+  - use half of my data to avoid memory errors.
+  - use smaller batch size (I was already using really small batch size (5)).
+  - find which cnn architecture my model resembles (most likely VGG or ResNet).
+  - experiment with concatenating and summing the visual and the language inputs.
+  - concatenate the textual inputs after getting embeddings for them.
  
 ## 30.01.2021
 - Only added production companies as extra input to my model – I think language and countries where the movie was shot won't provide valuable information for the classification task.
