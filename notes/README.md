@@ -95,3 +95,34 @@ I am planning to use this as a lab log.
 - retrained my models on half of the data.
  
 
+## 01.02.2021
+- Summed the inputs of different modalities and passed them through fully connected layers to get the predictions I needed.
+- I implemented a model that uses the production companies and poster as input for the classification.
+
+## 02.02.2021
+- Decided to not use the subset accuracy as an evaluation metric. A correct match is considered when there is at least one match between the ground truth and the prediction.
+- Also, read that AUC ROC is a good evaluation metric for classification of data that display a class imbalance. 
+
+## 03.02.2021
+- Nikolai suggested that I look at the confusion matrices for each genre to see discrepancies between them and hopefully, come with some conclusions as to why the data is classified the way it is.
+- Nikolai also pointed out that my validation loss is different.
+
+## 06.02.2021
+- I compare the metrics of the different model's I made.
+
+## 07.02.2021
+- Started working on the paper.
+
+## 09.02.2021
+- Worked on creating plots for the paper.
+
+## 14.02.2021
+- Have a first draft of my paper ready.
+- Started working on the presentation.
+- Created additional plots to visualize what I am planning to present.
+
+## 15.02.2021
+- Submitted my paper for my colleagues to review.
+
+## 18.02.2021
+- Presented my work.
